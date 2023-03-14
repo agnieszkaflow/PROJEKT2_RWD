@@ -2,6 +2,7 @@
 * {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -17,24 +18,15 @@ body {
   background-color: grey;
 }
 
-.topnav-left {
-  float: left;
-}
-
-.topnav-right {
-  float: right;
-  display: flex;
+.topnav-links {
+  display: none;
 }
 
 .topnav a {
   color: white;
   text-decoration: none;
-  display: block;
+  display: flex;
   padding: 14px;
-}
-
-.contact {
-  cursor: not-allowed;
 }
 
 .banner {
@@ -62,14 +54,18 @@ body {
 }
 
 .banner-text {
+  width: 320px;
+  margin: auto;
+  padding-left: 10px;
   color: white;
-  width: 500px;
 }
 
 .banner-text h1 {
-  font-size: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  line-height: 40px;
+  color: white;
   font-weight: bold;
+  font-size: 30px;
 }
 
 .button {
@@ -85,11 +81,6 @@ body {
   line-height: 8;
 }
 
-.button:hover {
-  background-color: white;
-  color: #000605;
-}
-
 .content {
   width: auto;
   height: 100vh;
@@ -101,9 +92,9 @@ body {
 
 h2 {
   font-size: 36px;
-  font-weight: bold;
+  text-align: center;
   color: #152d41;
-  margin-bottom: 60px;
+  font-weight: bold;
 }
 
 .photo {
@@ -114,6 +105,7 @@ h2 {
   background-image: url(osoba1.jpg);
   background-size: cover;
   background-position: center;
+  margin: 60px auto 60px;
 }
 
 .details {
@@ -122,24 +114,17 @@ h2 {
 }
 
 .specialist {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 60px;
+  display: block;
+  text-align: justify;
 }
 
 .specialist-section {
   padding: 50px 0;
 }
 
-.specialist:nth-of-type(even) .photo,
-.specialist:nth-of-type(odd) .details {
-  order: 2;
-}
-
 .specialist:nth-of-type(odd) .photo,
 .specialist:nth-of-type(even) .details {
-  order: 1;
-  text-align: right;
+  text-align: justify;
 }
 
 .details h3 {
@@ -153,7 +138,7 @@ h2 {
 }
 
 .question {
-  font-size: 36px;
+  font-size: 34px;
   color: #f1f1f1;
   margin-left: 30px;
 }
@@ -165,9 +150,9 @@ h2 {
 
 .flex-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto;
   grid-column-gap: 80px;
-  grid-row-gap: 80px;
+  grid-row-gap: 40px;
   width: 100%;
   margin: 50px 0;
   justify-content: center;
@@ -176,7 +161,7 @@ h2 {
 .flex-container > .flex-box {
   width: 198px;
   height: 198px;
-  margin: auto;
+
   background-color: #f1f1f1;
 }
 
@@ -186,10 +171,6 @@ h2 {
   justify-content: center;
   flex-direction: column;
   transition-duration: 0.5s;
-}
-
-.flex-box:hover {
-  transform: scale(1.05);
 }
 
 .flex-container > .flex-box:nth-child(1)::before {
@@ -206,145 +187,70 @@ h2 {
 
 .footer {
   width: 100%;
-  height: 50px;
+  height: 100px;
   background-color: grey;
 }
 
 .txt-footer {
-  font-size: 18px;
-  padding: 15px;
   color: #fff;
+  font-size: 13px;
+  padding: 20px;
+  text-align: center;
 }
 
 .fa-brands {
-  padding: 10px 20px;
   width: 10px;
   height: 10px;
   color: white;
   display: inline-flex;
   font-size: xx-large;
+  padding: 0 20px;
 }
 
 .icons {
-  margin-right: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-between;
+  display: block;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 565px) {
   .container {
-    width: 320px;
+    width: 565px;
   }
-  .topnav-right {
-    float: left;
-  }
-  .banner-text {
-    width: 320px;
-    margin: auto;
-    padding-left: 10px;
-  }
-  .banner-text h1 {
-    margin-bottom: 30px;
-    line-height: 35px;
-  }
-  .specialist {
-    display: block;
-    text-align: justify;
-  }
+
   .flex-container {
-    display: block;
-  }
-  .flex-container > .flex-box {
-    margin-top: 20px;
-  }
-  .specialist:nth-of-type(odd) .photo,
-  .specialist:nth-of-type(even) .details {
-    text-align: justify;
-  }
-  h2 {
-    text-align: center;
-  }
-  .photo {
-    margin: auto;
-    margin-bottom: 60px;
-  }
-  .txt-footer {
-    font-size: 13px;
-    padding-top: 20px;
-    text-align: justify;
-  }
-  .footer-container {
-    display: block;
-  }
-  .footer {
-    height: 100px;
-  }
-  .icons {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
+    width: 100%;
+    margin: 50px 0;
     justify-content: center;
   }
-  .fa-brands {
-    padding: 0 20px;
-  }
-}
 
-@media screen and (min-width: 576px) {
-  .container {
-    width: 576px;
-  }
-  .topnav-right {
-    float: left;
-  }
-  .banner-text {
-    width: 576px;
-    margin: auto;
-  }
-  .banner-text h1 {
-    margin-bottom: 30px;
-    line-height: 35px;
-  }
-  .specialist {
-    display: block;
-    text-align: justify;
-  }
-  .flex-container {
-    display: block;
-  }
-  .flex-container > .flex-box {
-    margin-top: 20px;
-  }
-  .specialist:nth-of-type(odd) .photo,
-  .specialist:nth-of-type(even) .details {
-    text-align: justify;
-  }
-  h2 {
-    text-align: center;
-  }
-  .photo {
-    margin: auto;
-    margin-bottom: 60px;
-  }
-  .txt-footer {
-    font-size: 13px;
-    padding-top: 20px;
-    text-align: justify;
-  }
   .footer-container {
-    display: block;
+    display: flex;
+    justify-content: space-between;
   }
+
   .footer {
-    height: 100px;
+    height: 50px;
   }
 
   .icons {
-    display: flex;
-    justify-content: center;
+    margin-right: 20px;
   }
+
   .fa-brands {
-    padding: 0 20px;
+    padding: 10px 20px;
+    width: 10px;
+    height: 10px;
+    color: white;
+    display: inline-flex;
+    font-size: xx-large;
   }
 }
 
@@ -352,105 +258,94 @@ h2 {
   .container {
     width: 768px;
   }
-  .topnav-right {
-    float: left;
+
+  .topnav-links {
+    display: flex;
   }
+
+  .topnav .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact {
+    cursor: not-allowed;
+  }
+
   .banner-text {
     width: 768px;
     margin: auto;
+    color: white;
   }
-  .specialist {
-    display: block;
-    text-align: justify;
-  }
-  .flex-container {
-    display: block;
-  }
-  .flex-container > .flex-box {
-    margin-top: 20px;
-  }
-  .specialist:nth-of-type(odd) .photo,
-  .specialist:nth-of-type(even) .details {
-    text-align: justify;
-  }
-  h2 {
-    text-align: center;
-  }
-  .photo {
-    margin: auto;
-    margin-bottom: 60px;
-  }
-  .txt-footer {
-    font-size: 13px;
-    padding-top: 20px;
-    text-align: justify;
-  }
-  .footer-container {
-    display: block;
-  }
-  .footer {
-    height: 100px;
-  }
-  .icons {
-    display: flex;
-    justify-content: center;
-  }
-  .fa-brands {
-    padding: 0 20px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .container {
-    width: 992px;
-  }
-  .topnav-right {
-    float: left;
-  }
-  .banner-text {
-    width: 992px;
-    margin: auto;
-  }
+
   .banner-text h1 {
-    margin-bottom: 30px;
-    line-height: 35px;
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-weight: bold;
   }
+
+  .button:hover {
+    background-color: white;
+    color: #000605;
+  }
+
   .specialist {
-    display: block;
-    text-align: justify;
-  }
-  .flex-container {
-    display: block;
-  }
-  .flex-container > .flex-box {
-    margin-top: 20px;
-  }
-  .specialist:nth-of-type(odd) .photo,
-  .specialist:nth-of-type(even) .details {
-    text-align: justify;
-  }
-  h2 {
-    text-align: center;
-  }
-  .photo {
-    margin: auto;
+    display: flex;
+    flex-direction: row;
     margin-bottom: 60px;
   }
+
+  .flex-box:hover {
+    transform: scale(1.05);
+  }
+
+  .flex-container {
+    grid-template-columns: auto auto auto;
+  }
+
+  .flex-container > .flex-box {
+    width: 198px;
+    height: 198px;
+    margin: auto;
+    background-color: #f1f1f1;
+  }
+
+  .specialist:nth-of-type(even) .photo,
+  .specialist:nth-of-type(odd) .details {
+    order: 2;
+  }
+
+  .specialist:nth-of-type(odd) .photo,
+  .specialist:nth-of-type(even) .details {
+    order: 1;
+    text-align: right;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #152d41;
+    margin-bottom: 60px;
+  }
+
+  .question {
+    font-size: 36px;
+  }
+
+  .photo {
+    width: 150px;
+    height: 150px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-image: url(osoba1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
   .txt-footer {
+    color: #fff;
     font-size: 13px;
     padding-top: 20px;
     text-align: justify;
-  }
-  .footer-container {
-    display: block;
-  }
-  .footer {
-    height: 100px;
-  }
-  .icons {
-    display: flex;
-    justify-content: center;
-  }
-  .fa-brands {
-    padding: 0 20px;
   }
 }
