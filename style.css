@@ -55,7 +55,6 @@ body {
 
 .banner-text {
   width: 320px;
-  margin: auto;
   padding-left: 10px;
   color: white;
 }
@@ -92,9 +91,9 @@ body {
 
 h2 {
   font-size: 36px;
-  text-align: center;
   color: #152d41;
   font-weight: bold;
+  padding-left: 10px;
 }
 
 .photo {
@@ -216,13 +215,8 @@ h2 {
   }
 
   .grid-container {
-    display: grid;
     grid-template-columns: auto auto;
-    grid-column-gap: 80px;
     grid-row-gap: 80px;
-    width: 100%;
-    margin: 50px 0;
-    justify-content: center;
   }
 
   .footer-container {
@@ -240,17 +234,12 @@ h2 {
 
   .fa-brands {
     padding: 10px 20px;
-    width: 10px;
-    height: 10px;
-    color: white;
-    display: inline-flex;
-    font-size: xx-large;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 960px;
   }
 
   .topnav-links {
@@ -267,15 +256,11 @@ h2 {
   }
 
   .banner-text {
-    width: 768px;
-    margin: auto;
-    color: white;
+    width: auto;
   }
 
   .banner-text h1 {
-    font-size: 30px;
     margin-bottom: 50px;
-    font-weight: bold;
   }
 
   .button:hover {
@@ -298,10 +283,7 @@ h2 {
   }
 
   .grid-container > .flex-box {
-    width: 198px;
-    height: 198px;
     margin: auto;
-    background-color: #f1f1f1;
   }
 
   .specialist:nth-of-type(even) .photo,
@@ -326,19 +308,8 @@ h2 {
     font-size: 36px;
   }
 
-  .photo {
-    width: 150px;
-    height: 150px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-image: url(osoba1.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-
   .txt-footer {
-    color: #fff;
-    font-size: 13px;
+    font-size: 15px;
     padding-top: 20px;
     text-align: justify;
   }
